@@ -88,6 +88,7 @@ soupsieve==2.6
 SQLAlchemy==2.0.39
 stack-data==0.6.3
 starlette==0.41.3
+supabase
 tomli==2.2.1
 tornado==6.4.2
 tqdm==4.67.1
