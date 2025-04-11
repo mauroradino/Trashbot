@@ -1,11 +1,11 @@
 import React from 'react'
 import LoginForm from '../components/LoginForm'
-
+import logoTrashop from '/Logo_Trashop.svg'
 const Login = () => {
   return (
-    <main className="flex items-center justify-center bg-white overflow-hidden">
-    <div className="w-full items-center max-w-screen-sm px-4">
-      <h2 className="text-center mb-4">LOGO</h2>
+    <main style={{height: "calc(100vh - 64px)"}} className="flex items-center justify-center bg-[#e9efe7]">
+    <div style={{height: "calc(100vh - 64px)"}} className="w-full max-w-screen-sm flex flex-col gap-3  justify-center">
+      <img src={logoTrashop} className='w-[200px] mx-auto'  alt='logo'/>
       <LoginForm />
     </div>
   </main>

@@ -35,9 +35,8 @@ const LoginForm = () => {
 
 
   return (
-    <form className="flex-grow flex flex-col w-full gap-4 p-8 rounded-lg shadow-lg bg-[#4CAF50] lg:w-full">
+    <form  className="flex flex-col w-full gap-4 p-4 h-min rounded-lg shadow-lg bg-[#4CAF50] lg:w-full">
     <h1 className="text-white text-center mb-4 text-3xl font-bold">Login</h1>
-  
     <input
       type="email"
       placeholder="Correo Electrónico"
@@ -59,6 +58,7 @@ const LoginForm = () => {
     <button  onClick={(e) => handleSubmit(e)} className="w-full bg-white text-green-600 font-semibold py-2 rounded-md hover:bg-green-100 hover:cursor-pointer transition">
       Iniciar Sesión
     </button>
+    <a href="/registro" className='text-white underline'>Todavía no te registraste?</a>
   </form>
   
 )

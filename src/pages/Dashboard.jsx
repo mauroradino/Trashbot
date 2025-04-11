@@ -38,8 +38,8 @@ const Dashboard = () => {
       }
 
   return (
-    <div>
-      <h1 className="text-[#4CAF50] font-semibold mt-4 text-center text-3xl">MI LISTA DE COMPRAS</h1>
+    <main style={{height: "calc(100vh - 64px)"}} className="bg-[#e9efe7] pt-4">
+      <h1 className="text-[#4CAF50] font-semibold text-center text-3xl">MI LISTA DE COMPRAS</h1>
       <div className='bg-white rounded-lg shadow-lg w-10/12 min-h-80 mx-auto mt-4 overflow-y-auto'>
      {Lista.map((item, index) => (
         <div key={index} className={`flex justify-between items-center bg-[#4CAF50] p-4 border-b border-gray-300 ${index === 0 ? "rounded-t-lg" : 'null'} ${ index === Lista.length ? "rounded-b-lg" : "null"}`}>
@@ -48,7 +48,7 @@ const Dashboard = () => {
         </div>
       ))} 
       </div>
-    </div>
+    </main>
   )
 }
 

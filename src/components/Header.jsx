@@ -17,7 +17,7 @@ const Header = () => {
 
 
   return (
-    <header className='w-screen h-16  bg-[#4CAF50] shadow-md flex items-center justify-between px-4'>
+    <header className='w-full h-16  bg-[#4CAF50] shadow-md flex items-center justify-between px-4'>
         <h1 className='text-white font-bold text-3xl'>TRASHOP</h1>
         <button onClick={Logout} className='p-3 bg-white rounded-lg text-[#4CAF50] hover:cursor-pointer'>{loggedIn? "Logout": "Sesión no iniciada"}</button>
     </header>

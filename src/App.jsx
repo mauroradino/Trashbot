@@ -5,6 +5,7 @@ import { useContext } from 'react'
 import { AuthContext } from '../context'
 import './App.css'
 import Header from './components/Header'
+import Registro from './pages/Registro'
 
 function App() {
   const { loggedIn } = useContext(AuthContext)
@@ -13,6 +14,7 @@ function App() {
     <Header/>
       <Routes>
         <Route path="/" element={<Login />} />
+        <Route path="/registro" element={<Registro />} />
         {loggedIn ? <Route path="/dashboard" element={<Dashboard />} /> : <Route path="/" element={<Login />} />}
       </Routes>
     </BrowserRouter>
