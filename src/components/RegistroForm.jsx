@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import { supabase } from '../../supabaseClient'
 import { useNavigate } from 'react-router-dom'
+import Swal from 'sweetalert2'
 
 const RegistroForm = () => {
     const navigate = useNavigate()
@@ -23,9 +24,21 @@ const RegistroForm = () => {
                 });
             if(error) {
                 console.error('Error creating user:' , error.message);
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: "Error al crear el usuario. Verifica tus credenciales",
+                    confirmButtonText: 'Intentar de nuevo'
+                  })
             } 
             else{
                 console.log('User created successfully:', data);
+                Swal.fire({
+                    icon: 'success',
+                    title: '¡Bienvenido!',
+                    text: 'Usuario creado correctamente.',
+                    confirmButtonText: 'Continuar'
+                  })
                 navigate("/")
             }
         }

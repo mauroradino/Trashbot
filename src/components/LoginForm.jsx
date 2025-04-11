@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import { supabase } from '../../supabaseClient' // Adjust the import path as necessary
 import { AuthContext } from '../../context'
+import Swal from 'sweetalert2'
+
 const LoginForm = () => {
   const { setLoggedIn } = useContext(AuthContext)
   const navigate = useNavigate()
@@ -18,7 +20,19 @@ const LoginForm = () => {
   })
   if (error) {
     console.error('Error logging in:', error.message)
+    Swal.fire({
+      icon: 'error',
+      title: 'Error',
+      text: "Error al iniciar sesión. Verifica tus credenciales",
+      confirmButtonText: 'Intentar de nuevo'
+    })
   } else {
+    Swal.fire({
+      icon: 'success',
+      title: '¡Bienvenido!',
+      text: 'Sesión iniciada correctamente.',
+      confirmButtonText: 'Continuar'
+    })
     console.log('Logged in successfully:')
     setFormData({
       email: "",
